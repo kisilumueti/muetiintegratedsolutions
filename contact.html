@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact | MUETI INTEGRATED SOLUTIONS</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+body { background:#0b1220; color:#e0e4f0; }
+.navbar { background:#060a14; }
+.nav-link { color:#cbd5e6 !important; }
+.nav-link.active { color:#60a5fa !important; }
+.card { background:#111a2e; border:1px solid #1f2a44; border-radius:16px; }
+.form-control, .form-control:focus {
+  background: #0a1020;
+  border: 1px solid #1f2a44;
+  color: white;
+}
+.form-control:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 0.2rem rgba(59,130,246,0.25);
+}
+</style>
+</head>
+
+<body>
+
+<nav class="navbar navbar-dark p-3">
+  <div class="container">
+    <a href="index.html" class="navbar-brand">← MUETI IS</a>
+    <div>
+      <a href="index.html" class="nav-link d-inline-block mx-2">Home</a>
+      <a href="about.html" class="nav-link d-inline-block mx-2">About</a>
+      <a href="owner.html" class="nav-link d-inline-block mx-2">Owner</a>
+      <a href="contact.html" class="nav-link active d-inline-block mx-2">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<div class="container py-5">
+  <div class="row">
+    <div class="col-lg-6">
+      <h2>Contact Us</h2>
+      <div class="card p-4 mt-3">
+        <p><strong>📧 Email:</strong> muetiintegratedsolutions@gmail.com</p>
+        <p><strong>📞 Phone:</strong> +254 740 213 780</p>
+        <p><strong>📍 Location:</strong> Nairobi, Kenya</p>
+        <p><strong>⏰ Business Hours:</strong> Mon-Fri, 8AM - 6PM</p>
+        <hr class="border-secondary">
+        <p><small class="text-info">💡 For urgent POS integration inquiries, please call directly.</small></p>
+      </div>
+    </div>
+    
+    <div class="col-lg-6">
+      <h2>Business Inquiry</h2>
+      <div class="card p-4 mt-3">
+        <form action="mailto:muetiintegratedsolutions@gmail.com" method="POST" enctype="text/plain">
+          <input type="text" name="name" class="form-control mb-3" placeholder="Full Name" required>
+          <input type="email" name="email" class="form-control mb-3" placeholder="Email Address" required>
+          <input type="tel" name="phone" class="form-control mb-3" placeholder="Phone Number">
+          <select class="form-control mb-3" name="service">
+            <option value="">Select Service Needed</option>
+            <option>ICT Infrastructure</option>
+            <option>POS System Integration</option>
+            <option>Business Automation</option>
+            <option>ICT Consultancy</option>
+            <option>Payment Gateway (Pesapal) Setup</option>
+          </select>
+          <textarea name="message" class="form-control mb-3" rows="5" placeholder="Tell us about your project..." required></textarea>
+          <button type="submit" class="btn btn-primary w-100">Send Inquiry →</button>
+        </form>
+        <small class="text-secondary mt-3 text-center">We'll respond within 24 business hours</small>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="text-center py-4 border-top border-secondary">
+  <small>© 2026 MUETI INTEGRATED SOLUTIONS | Your Technology Partner</small>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  // Optional: Form validation enhancement
+  document.querySelector('form')?.addEventListener('submit', function(e) {
+    const name = this.querySelector('input[name="name"]').value.trim();
+    const email = this.querySelector('input[name="email"]').value.trim();
+    if (!name || !email) {
+      e.preventDefault();
+      alert('Please fill in your name and email address.');
+    } else {
+      alert('Thank you! Your inquiry will be sent via email. We will get back to you shortly.');
+    }
+  });
+</script>
+</body>
+</html>
