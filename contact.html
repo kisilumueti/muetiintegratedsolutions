@@ -3,87 +3,664 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Contact | MUETI INTEGRATED SOLUTIONS</title>
+<meta name="description" content="Contact MUETI INTEGRATED SOLUTIONS - Get in touch for ICT consulting, API integrations, web development, and POS system inquiries">
+<title>Contact Us | MUETI INTEGRATED SOLUTIONS</title>
+
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <style>
-body { background:#0b1220; color:#e0e4f0; }
-.navbar { background:#060a14; }
-.nav-link { color:#cbd5e6 !important; }
-.nav-link.active { color:#60a5fa !important; }
-.card { background:#111a2e; border:1px solid #1f2a44; border-radius:16px; }
-.form-control, .form-control:focus {
-  background: #0a1020;
-  border: 1px solid #1f2a44;
+:root {
+  --primary: #0066CC;
+  --primary-dark: #004999;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #2c3e50;
+  line-height: 1.6;
+  background: white;
+}
+
+/* Navigation */
+.navbar {
+  background: white;
+  box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+  padding: 1rem 0;
+}
+
+.navbar-brand {
+  font-weight: 800;
+  font-size: 1.6rem;
+  color: var(--primary) !important;
+}
+
+.nav-link {
+  font-weight: 600;
+  color: #2c3e50 !important;
+  margin: 0 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover, .nav-link.active {
+  color: var(--primary) !important;
+}
+
+/* Page Header */
+.page-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 120px 0 60px;
+  margin-top: 70px;
+}
+
+.page-header h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+/* Contact Section */
+.contact-section {
+  padding: 60px 0;
+  background: white;
+}
+
+.contact-card {
+  background: #f8f9fa;
+  border-radius: 20px;
+  padding: 2rem;
+  height: 100%;
+  transition: all 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.contact-icon {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.contact-icon i {
+  font-size: 1.8rem;
   color: white;
 }
-.form-control:focus {
-  border-color: #3b82f6;
-  box-shadow: 0 0 0 0.2rem rgba(59,130,246,0.25);
+
+.contact-card h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
 }
-.form-control option {
-  background: #0a1020;
+
+.contact-detail {
+  margin-top: 1rem;
+}
+
+.contact-detail p {
+  margin-bottom: 0.5rem;
+}
+
+.contact-detail a {
+  color: #2c3e50;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-detail a:hover {
+  color: var(--primary);
+}
+
+/* Form Section */
+.form-section {
+  background: #f8f9fa;
+  padding: 60px 0;
+}
+
+.form-card {
+  background: white;
+  border-radius: 20px;
+  padding: 2.5rem;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+.form-title {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.form-title h2 {
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+
+.form-control, .form-select {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 12px 15px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus, .form-select:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(0,102,204,0.1);
+  outline: none;
+}
+
+.btn-submit {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 14px 35px;
+  border-radius: 50px;
+  font-weight: 700;
+  border: none;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.btn-submit:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* Map Section */
+.map-section {
+  padding: 60px 0;
+  background: white;
+}
+
+.map-card {
+  background: #f8f9fa;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.map-placeholder {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+.map-placeholder i {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+/* Business Hours */
+.hours-section {
+  background: #f8f9fa;
+  padding: 60px 0;
+}
+
+.hours-card {
+  background: white;
+  border-radius: 20px;
+  padding: 2rem;
+  text-align: center;
+  height: 100%;
+}
+
+.hours-card i {
+  font-size: 2.5rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.hours-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 1.5rem;
+}
+
+.hours-list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.hours-list li:last-child {
+  border-bottom: none;
+}
+
+.day {
+  font-weight: 600;
+}
+
+/* FAQ Section */
+.faq-section {
+  padding: 60px 0;
+  background: white;
+}
+
+.faq-card {
+  background: #f8f9fa;
+  border-radius: 15px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+}
+
+.faq-card:hover {
+  background: white;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+.faq-question {
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: var(--primary);
+}
+
+.faq-answer {
+  color: #6c757d;
+}
+
+/* CTA Section */
+.cta-section {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.btn-outline-custom {
+  background: transparent;
+  color: white;
+  padding: 12px 35px;
+  border-radius: 50px;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+  border: 2px solid white;
+}
+
+.btn-outline-custom:hover {
+  background: white;
+  color: var(--primary);
+  transform: translateY(-3px);
+}
+
+/* Footer */
+.footer {
+  background: #1a1a2e;
+  color: white;
+  padding: 60px 0 20px;
+}
+
+.footer h5 {
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 0.8rem;
+}
+
+.footer-links a {
+  color: #aaa;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: white;
+  padding-left: 5px;
+}
+
+.social-icons a {
+  color: white;
+  font-size: 1.5rem;
+  margin-right: 1rem;
+  transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: var(--primary);
+}
+
+@media (max-width: 768px) {
+  .page-header h1 {
+    font-size: 2rem;
+  }
+  .form-card {
+    padding: 1.5rem;
+  }
+  .contact-card {
+    margin-bottom: 1rem;
+  }
 }
 </style>
 </head>
 
 <body>
 
-<nav class="navbar navbar-dark p-3">
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg fixed-top">
   <div class="container">
-    <a href="index.html" class="navbar-brand">← MUETI IS</a>
-    <div>
-      <a href="index.html" class="nav-link d-inline-block mx-2">Home</a>
-      <a href="about.html" class="nav-link d-inline-block mx-2">About</a>
-      <a href="owner.html" class="nav-link d-inline-block mx-2">Owner</a>
-      <a href="contact.html" class="nav-link active d-inline-block mx-2">Contact</a>
+    <a class="navbar-brand" href="index.html">MUETI IS</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="owner.html">Owner</a></li>
+        <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+      </ul>
     </div>
   </div>
 </nav>
 
-<div class="container py-5">
-  <div class="row">
-    <div class="col-lg-6">
-      <h2>Contact Us</h2>
-      <div class="card p-4 mt-3">
-        <p><strong>📧 Email:</strong> muetiintegratedsolutions@gmail.com</p>
-        <p><strong>📞 Phone:</strong> +254 740 213 780</p>
-        <p><strong>📍 Location:</strong> Nairobi, Kenya</p>
-        <p><strong>⏰ Business Hours:</strong> Mon-Fri, 8AM - 6PM</p>
-        <hr class="border-secondary">
-        <p><small class="text-info">💡 For urgent POS integration inquiries, please call directly.</small></p>
+<!-- Page Header -->
+<section class="page-header">
+  <div class="container">
+    <h1>Contact Us</h1>
+    <p class="lead">Get in touch with our team for inquiries, support, or partnerships</p>
+  </div>
+</section>
+
+<!-- Contact Information Cards -->
+<section class="contact-section">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="contact-card">
+          <div class="contact-icon">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+          <h3>Visit Us</h3>
+          <div class="contact-detail">
+            <p><strong>Head Office</strong></p>
+            <p>Nairobi, Kenya</p>
+            <p class="text-muted">By appointment only</p>
+          </div>
+        </div>
       </div>
-    </div>
-    
-    <div class="col-lg-6">
-      <h2>Business Inquiry</h2>
-      <div class="card p-4 mt-3">
-        <form action="mailto:muetiintegratedsolutions@gmail.com" method="POST" enctype="text/plain">
-          <input type="text" name="name" class="form-control mb-3" placeholder="Full Name" required>
-          <input type="email" name="email" class="form-control mb-3" placeholder="Email Address" required>
-          <input type="tel" name="phone" class="form-control mb-3" placeholder="Phone Number">
-          <select class="form-control mb-3" name="service">
-            <option value="">Select Service Needed</option>
-            <option>ICT Infrastructure</option>
-            <option>POS System Integration</option>
-            <option>Business Automation</option>
-            <option>ICT Consultancy</option>
-          </select>
-          <textarea name="message" class="form-control mb-3" rows="5" placeholder="Tell us about your project..." required></textarea>
-          <button type="submit" class="btn btn-primary w-100">Send Inquiry →</button>
-        </form>
-        <small class="text-secondary mt-3 text-center d-block">We'll respond within 24 business hours</small>
+      
+      <div class="col-md-4">
+        <div class="contact-card">
+          <div class="contact-icon">
+            <i class="fas fa-phone-alt"></i>
+          </div>
+          <h3>Call Us</h3>
+          <div class="contact-detail">
+            <p><strong>Phone:</strong> <a href="tel:+254740213780">+254 740 213 780</a></p>
+            <p><strong>WhatsApp:</strong> <a href="https://wa.me/254740213780">+254 740 213 780</a></p>
+            <p class="text-muted">Mon-Fri, 8AM - 6PM</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-4">
+        <div class="contact-card">
+          <div class="contact-icon">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <h3>Email Us</h3>
+          <div class="contact-detail">
+            <p><strong>Business Inquiries:</strong><br>
+            <a href="mailto:muetiintegratedsolutions@gmail.com">muetiintegratedsolutions@gmail.com</a></p>
+            <p class="text-muted">Response within 24 hours</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-</div>
+</section>
 
-<footer class="text-center py-4 border-top border-secondary">
-  <small>© 2026 MUETI INTEGRATED SOLUTIONS | Your Technology Partner</small>
+<!-- Inquiry Form Section -->
+<section class="form-section">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="form-card">
+          <div class="form-title">
+            <h2>Send an Inquiry</h2>
+            <p class="text-muted">Fill out the form below and we'll get back to you within 24 hours</p>
+          </div>
+          
+          <form action="mailto:muetiintegratedsolutions@gmail.com" method="POST" enctype="text/plain">
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label class="form-label">Full Name *</label>
+                <input type="text" name="name" class="form-control" required>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label class="form-label">Email Address *</label>
+                <input type="email" name="email" class="form-control" required>
+              </div>
+            </div>
+            
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label class="form-label">Phone Number</label>
+                <input type="tel" name="phone" class="form-control">
+              </div>
+              <div class="col-md-6 mb-3">
+                <label class="form-label">Company Name</label>
+                <input type="text" name="company" class="form-control">
+              </div>
+            </div>
+            
+            <div class="mb-3">
+              <label class="form-label">Service Interested In *</label>
+              <select name="service" class="form-select" required>
+                <option value="">Select a service</option>
+                <option>API Integrations</option>
+                <option>Web Development</option>
+                <option>POS Systems</option>
+                <option>ICT Infrastructure</option>
+                <option>Business Automation</option>
+                <option>ICT Consultancy</option>
+                <option>Other - Please specify</option>
+              </select>
+            </div>
+            
+            <div class="mb-3">
+              <label class="form-label">Message *</label>
+              <textarea name="message" class="form-control" rows="5" placeholder="Tell us about your project, requirements, or questions..." required></textarea>
+            </div>
+            
+            <button type="submit" class="btn-submit">Send Message <i class="fas fa-paper-plane ms-2"></i></button>
+          </form>
+          
+          <div class="text-center mt-4">
+            <small class="text-muted">We respect your privacy. Your information will never be shared.</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Business Hours -->
+<section class="hours-section">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-md-6">
+        <div class="hours-card">
+          <i class="fas fa-clock"></i>
+          <h3>Business Hours</h3>
+          <ul class="hours-list">
+            <li><span class="day">Monday - Friday</span><span>8:00 AM - 6:00 PM</span></li>
+            <li><span class="day">Saturday</span><span>9:00 AM - 2:00 PM</span></li>
+            <li><span class="day">Sunday</span><span>Closed</span></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="col-md-6">
+        <div class="hours-card">
+          <i class="fas fa-headset"></i>
+          <h3>Support Hours</h3>
+          <ul class="hours-list">
+            <li><span class="day">Technical Support</span><span>24/7 for active clients</span></li>
+            <li><span class="day">Emergency Support</span><span>Available anytime</span></li>
+            <li><span class="day">Response Time</span><span>Within 2 hours</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Map Section -->
+<section class="map-section">
+  <div class="container">
+    <div class="map-card">
+      <div class="map-placeholder">
+        <div>
+          <i class="fas fa-map-marker-alt"></i>
+          <h4>Nairobi, Kenya</h4>
+          <p>Service coverage across East Africa</p>
+          <small>📍 Nairobi • Mombasa • Kisumu • Uganda • Tanzania • Rwanda</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="faq-section">
+  <div class="container">
+    <div class="section-title text-center mb-5">
+      <h2 style="font-weight: 800;">Frequently Asked Questions</h2>
+      <div style="width: 60px; height: 3px; background: var(--primary); margin: 0 auto;"></div>
+    </div>
+    
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="faq-card">
+          <div class="faq-question">How quickly can you respond to inquiries?</div>
+          <div class="faq-answer">We aim to respond to all inquiries within 24 business hours. For urgent matters, please call us directly.</div>
+        </div>
+        
+        <div class="faq-card">
+          <div class="faq-question">Do you offer customized solutions?</div>
+          <div class="faq-answer">Yes, every solution we build is tailored specifically to your business needs. We don't believe in one-size-fits-all.</div>
+        </div>
+        
+        <div class="faq-card">
+          <div class="faq-question">What industries do you serve?</div>
+          <div class="faq-answer">We serve retail, hospitality, finance, manufacturing, healthcare, education, logistics, and real estate sectors.</div>
+        </div>
+      </div>
+      
+      <div class="col-lg-6">
+        <div class="faq-card">
+          <div class="faq-question">Do you provide ongoing support?</div>
+          <div class="faq-answer">Yes, we offer 24/7 technical support for all our active clients, including maintenance and updates.</div>
+        </div>
+        
+        <div class="faq-card">
+          <div class="faq-question">What is your typical project timeline?</div>
+          <div class="faq-answer">Timelines vary based on project scope. A typical website takes 2-4 weeks, while complex integrations may take 4-8 weeks.</div>
+        </div>
+        
+        <div class="faq-card">
+          <div class="faq-question">Do you work with businesses outside Kenya?</div>
+          <div class="faq-answer">Absolutely! We serve clients across East Africa including Uganda, Tanzania, and Rwanda.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Call to Action -->
+<section class="cta-section">
+  <div class="container">
+    <h2>Prefer to talk directly?</h2>
+    <p class="lead mb-4">Call us at <strong style="font-size: 1.5rem;">+254 740 213 780</strong></p>
+    <a href="https://wa.me/254740213780" class="btn-outline-custom"><i class="fab fa-whatsapp me-2"></i> WhatsApp Us</a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 mb-4">
+        <h5>MUETI INTEGRATED SOLUTIONS</h5>
+        <p>Premier ICT company delivering enterprise-grade technology solutions across Kenya and East Africa.</p>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+          <a href="#"><i class="fab fa-github"></i></a>
+        </div>
+      </div>
+      
+      <div class="col-lg-2 col-md-6 mb-4">
+        <h5>Quick Links</h5>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="owner.html">Owner</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      
+      <div class="col-lg-3 col-md-6 mb-4">
+        <h5>Our Services</h5>
+        <ul class="footer-links">
+          <li><a href="index.html">API Integrations</a></li>
+          <li><a href="index.html">Web Development</a></li>
+          <li><a href="index.html">POS Systems</a></li>
+          <li><a href="index.html">ICT Infrastructure</a></li>
+          <li><a href="index.html">Business Automation</a></li>
+        </ul>
+      </div>
+      
+      <div class="col-lg-3 mb-4">
+        <h5>Contact Info</h5>
+        <ul class="footer-links">
+          <li><i class="fas fa-envelope me-2"></i> muetiintegratedsolutions@gmail.com</li>
+          <li><i class="fas fa-phone me-2"></i> +254 740 213 780</li>
+          <li><i class="fas fa-map-marker-alt me-2"></i> Nairobi, Kenya</li>
+          <li><i class="fas fa-clock me-2"></i> Mon-Fri: 8AM - 6PM</li>
+        </ul>
+      </div>
+    </div>
+    
+    <hr class="mt-4">
+    
+    <div class="text-center">
+      <small>© 2026 MUETI INTEGRATED SOLUTIONS. All rights reserved.</small>
+    </div>
+  </div>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script>
+  // Form submission alert
   document.querySelector('form')?.addEventListener('submit', function(e) {
     const name = this.querySelector('input[name="name"]').value.trim();
     const email = this.querySelector('input[name="email"]').value.trim();
@@ -91,7 +668,7 @@ body { background:#0b1220; color:#e0e4f0; }
       e.preventDefault();
       alert('Please fill in your name and email address.');
     } else {
-      alert('Thank you! Your inquiry will be sent via email. We will get back to you shortly.');
+      alert('Thank you! Your inquiry has been sent. We will get back to you within 24 hours.');
     }
   });
 </script>
