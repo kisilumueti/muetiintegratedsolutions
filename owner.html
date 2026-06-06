@@ -3,69 +3,751 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Proprietor | MUETI INTEGRATED SOLUTIONS</title>
+<meta name="description" content="Meet Johnbosco Mueti Kisilu - Founder and Principal Consultant of MUETI INTEGRATED SOLUTIONS, ICT systems architect and business automation expert">
+<title>Owner | MUETI INTEGRATED SOLUTIONS - Johnbosco Mueti Kisilu</title>
+
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <style>
-body { background:#0b1220; color:#e0e4f0; }
-.navbar { background:#060a14; }
-.nav-link { color:#cbd5e6 !important; }
-.nav-link.active { color:#60a5fa !important; }
-.card { background:#111a2e; border:1px solid #1f2a44; border-radius:16px; }
+:root {
+  --primary: #0066CC;
+  --primary-dark: #004999;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #2c3e50;
+  line-height: 1.6;
+  background: white;
+}
+
+/* Navigation */
+.navbar {
+  background: white;
+  box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+  padding: 1rem 0;
+}
+
+.navbar-brand {
+  font-weight: 800;
+  font-size: 1.6rem;
+  color: var(--primary) !important;
+}
+
+.nav-link {
+  font-weight: 600;
+  color: #2c3e50 !important;
+  margin: 0 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover, .nav-link.active {
+  color: var(--primary) !important;
+}
+
+/* Page Header */
+.page-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 120px 0 60px;
+  margin-top: 70px;
+}
+
+.page-header h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+/* Profile Section */
+.profile-section {
+  padding: 60px 0;
+  background: white;
+}
+
+.profile-card {
+  background: #f8f9fa;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+.profile-avatar {
+  width: 200px;
+  height: 200px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+}
+
+.profile-avatar i {
+  font-size: 5rem;
+  color: white;
+}
+
+.profile-name {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.profile-name h2 {
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+
+.profile-name p {
+  color: var(--primary);
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+/* Info Grid */
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.info-item {
+  background: white;
+  padding: 1rem;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.info-icon {
+  width: 40px;
+  height: 40px;
+  background: rgba(0,102,204,0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+  font-size: 1.2rem;
+}
+
+.info-label {
+  font-size: 0.8rem;
+  color: #6c757d;
+}
+
+.info-value {
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+/* Section Titles */
+.section-title {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-title h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.section-title .underline {
+  width: 60px;
+  height: 3px;
+  background: var(--primary);
+  margin: 0 auto;
+  border-radius: 2px;
+}
+
+/* Bio Section */
+.bio-section {
+  background: #f8f9fa;
+  padding: 60px 0;
+}
+
+.bio-card {
+  background: white;
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+  height: 100%;
+}
+
+.bio-card h3 {
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--primary);
+}
+
+/* Skills */
+.skills-section {
+  padding: 60px 0;
+  background: white;
+}
+
+.skill-item {
+  margin-bottom: 1.5rem;
+}
+
+.skill-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.skill-bar {
+  height: 10px;
+  background: #e0e0e0;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.skill-progress {
+  height: 100%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 5px;
+  transition: width 1s ease;
+}
+
+/* Certifications */
+.cert-section {
+  background: #f8f9fa;
+  padding: 60px 0;
+}
+
+.cert-card {
+  background: white;
+  border-radius: 15px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.cert-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.cert-icon {
+  font-size: 2.5rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+/* Experience */
+.experience-section {
+  padding: 60px 0;
+  background: white;
+}
+
+.exp-item {
+  display: flex;
+  margin-bottom: 2rem;
+  background: #f8f9fa;
+  border-radius: 15px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.exp-item:hover {
+  transform: translateX(5px);
+  background: white;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+.exp-year {
+  min-width: 120px;
+  font-weight: 800;
+  color: var(--primary);
+  font-size: 1.1rem;
+}
+
+.exp-content h4 {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+/* Contact CTA */
+.contact-cta {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.btn-primary-custom {
+  background: white;
+  color: var(--primary);
+  padding: 12px 35px;
+  border-radius: 50px;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+  border: 2px solid white;
+}
+
+.btn-primary-custom:hover {
+  background: transparent;
+  color: white;
+  transform: translateY(-3px);
+}
+
+/* Footer */
+.footer {
+  background: #1a1a2e;
+  color: white;
+  padding: 60px 0 20px;
+}
+
+.footer h5 {
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 0.8rem;
+}
+
+.footer-links a {
+  color: #aaa;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: white;
+  padding-left: 5px;
+}
+
+.social-icons a {
+  color: white;
+  font-size: 1.5rem;
+  margin-right: 1rem;
+  transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: var(--primary);
+}
+
+@media (max-width: 768px) {
+  .page-header h1 {
+    font-size: 2rem;
+  }
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+  .exp-item {
+    flex-direction: column;
+  }
+  .exp-year {
+    margin-bottom: 0.5rem;
+  }
+}
 </style>
 </head>
 
 <body>
 
-<nav class="navbar navbar-dark p-3">
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg fixed-top">
   <div class="container">
-    <a href="index.html" class="navbar-brand">← MUETI IS</a>
-    <div>
-      <a href="index.html" class="nav-link d-inline-block mx-2">Home</a>
-      <a href="about.html" class="nav-link d-inline-block mx-2">About</a>
-      <a href="owner.html" class="nav-link active d-inline-block mx-2">Owner</a>
-      <a href="contact.html" class="nav-link d-inline-block mx-2">Contact</a>
+    <a class="navbar-brand" href="index.html">MUETI IS</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link active" href="owner.html">Owner</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
     </div>
   </div>
 </nav>
 
-<div class="container py-5">
-  <h2>Proprietor Profile</h2>
-  <div class="card p-4 mt-3">
-    <div class="row">
-      <div class="col-md-8">
-        <p><strong>👤 Name:</strong> JOHNBOSCO MUETI KISILU</p>
-        <p><strong>🎯 Role:</strong> Founder & Principal Consultant</p>
-        <p><strong>🆔 ID Number:</strong> 40132012</p>
-        <p><strong>📧 Email:</strong> muetiintegratedsolutions@gmail.com</p>
-        <p><strong>📞 Phone:</strong> +254 740 213 780</p>
-        <p><strong>📍 Location:</strong> Nairobi, Kenya</p>
+<!-- Page Header -->
+<section class="page-header">
+  <div class="container">
+    <h1>Meet The Founder</h1>
+    <p class="lead">Visionary leadership behind MUETI INTEGRATED SOLUTIONS</p>
+  </div>
+</section>
+
+<!-- Profile Section -->
+<section class="profile-section">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="profile-card">
+          <div class="profile-avatar">
+            <i class="fas fa-user-tie"></i>
+          </div>
+          <div class="profile-name">
+            <h2>JOHNBOSCO MUETI KISILU</h2>
+            <p>Founder & Principal Consultant</p>
+          </div>
+          
+          <div class="info-grid">
+            <div class="info-item">
+              <div class="info-icon"><i class="fas fa-id-card"></i></div>
+              <div>
+                <div class="info-label">ID Number</div>
+                <div class="info-value">40132012</div>
+              </div>
+            </div>
+            <div class="info-item">
+              <div class="info-icon"><i class="fas fa-envelope"></i></div>
+              <div>
+                <div class="info-label">Email</div>
+                <div class="info-value">muetiintegratedsolutions@gmail.com</div>
+              </div>
+            </div>
+            <div class="info-item">
+              <div class="info-icon"><i class="fas fa-phone"></i></div>
+              <div>
+                <div class="info-label">Phone</div>
+                <div class="info-value">+254 740 213 780</div>
+              </div>
+            </div>
+            <div class="info-item">
+              <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+              <div>
+                <div class="info-label">Location</div>
+                <div class="info-value">Nairobi, Kenya</div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="col-md-4 text-center">
-        <div style="font-size: 5rem;">👨‍💼</div>
-        <small class="text-info">ICT Systems Architect</small>
+    </div>
+  </div>
+</section>
+
+<!-- Biography Section -->
+<section class="bio-section">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-6">
+        <div class="bio-card">
+          <h3><i class="fas fa-user-circle me-2"></i> Professional Background</h3>
+          <p>Johnbosco Mueti Kisilu is the founder and principal consultant at MUETI INTEGRATED SOLUTIONS, bringing over 8 years of experience in ICT systems integration, API development, and enterprise technology solutions.</p>
+          <p>His journey in technology began with a passion for solving business challenges through innovative digital solutions. Over the years, he has helped numerous businesses across Kenya and East Africa transform their operations through strategic technology implementation.</p>
+          <p>Johnbosco's approach combines technical excellence with business strategy, ensuring that every solution delivers measurable value to clients.</p>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="bio-card">
+          <h3><i class="fas fa-graduation-cap me-2"></i> Education & Qualifications</h3>
+          <ul style="list-style: none; padding-left: 0;">
+            <li class="mb-3"><i class="fas fa-check-circle text-primary me-2"></i> Bachelor's Degree in Information Technology</li>
+            <li class="mb-3"><i class="fas fa-check-circle text-primary me-2"></i> Certified ICT Systems Integrator</li>
+            <li class="mb-3"><i class="fas fa-check-circle text-primary me-2"></i> Advanced Diploma in Business Automation</li>
+            <li class="mb-3"><i class="fas fa-check-circle text-primary me-2"></i> Project Management Professional (PMP)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Core Competencies -->
+<section class="skills-section">
+  <div class="container">
+    <div class="section-title">
+      <h2>Core Competencies</h2>
+      <div class="underline"></div>
+      <p>Technical expertise and professional skills</p>
+    </div>
+    
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="skill-item">
+          <div class="skill-header">
+            <span>ICT Systems Integration</span>
+            <span>95%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-progress" style="width: 95%"></div>
+          </div>
+        </div>
+        
+        <div class="skill-item">
+          <div class="skill-header">
+            <span>API Development & Integration</span>
+            <span>90%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-progress" style="width: 90%"></div>
+          </div>
+        </div>
+        
+        <div class="skill-item">
+          <div class="skill-header">
+            <span>Web Development</span>
+            <span>88%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-progress" style="width: 88%"></div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-lg-6">
+        <div class="skill-item">
+          <div class="skill-header">
+            <span>POS System Deployment</span>
+            <span>92%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-progress" style="width: 92%"></div>
+          </div>
+        </div>
+        
+        <div class="skill-item">
+          <div class="skill-header">
+            <span>Business Process Automation</span>
+            <span>87%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-progress" style="width: 87%"></div>
+          </div>
+        </div>
+        
+        <div class="skill-item">
+          <div class="skill-header">
+            <span>IT Consulting & Strategy</span>
+            <span>90%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-progress" style="width: 90%"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Certifications -->
+<section class="cert-section">
+  <div class="container">
+    <div class="section-title">
+      <h2>Certifications</h2>
+      <div class="underline"></div>
+      <p>Professional credentials and recognition</p>
+    </div>
+    
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="cert-card">
+          <div class="cert-icon">
+            <i class="fas fa-certificate"></i>
+          </div>
+          <h5>Certified Systems Integrator</h5>
+          <p class="text-muted">ICT Authority Kenya</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="cert-card">
+          <div class="cert-icon">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <h5>Payment Gateway Specialist</h5>
+          <p class="text-muted">Certified Integration Expert</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="cert-card">
+          <div class="cert-icon">
+            <i class="fas fa-project-diagram"></i>
+          </div>
+          <h5>Agile Project Management</h5>
+          <p class="text-muted">Scrum Certified</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Work Experience -->
+<section class="experience-section">
+  <div class="container">
+    <div class="section-title">
+      <h2>Work Experience</h2>
+      <div class="underline"></div>
+    </div>
+    
+    <div class="exp-item">
+      <div class="exp-year">2020 - Present</div>
+      <div class="exp-content">
+        <h4>Founder & Principal Consultant</h4>
+        <p class="text-primary">MUETI INTEGRATED SOLUTIONS</p>
+        <p>Leading the company's strategic direction, overseeing ICT system architecture, managing enterprise client integrations, and driving business growth across East Africa.</p>
       </div>
     </div>
     
-    <hr class="border-secondary">
+    <div class="exp-item">
+      <div class="exp-year">2017 - 2020</div>
+      <div class="exp-content">
+        <h4>Senior ICT Consultant</h4>
+        <p class="text-primary">Various Enterprise Clients</p>
+        <p>Provided ICT consulting services to SMEs and enterprise clients, specializing in system integration, business automation, and digital transformation projects.</p>
+      </div>
+    </div>
     
-    <h5>Professional Background</h5>
-    <p>Responsible for strategic direction, ICT system architecture oversight, and enterprise client integration. With extensive experience in business automation and POS system deployment across East Africa.</p>
-    
-    <h5 class="mt-3">Core Competencies</h5>
-    <ul>
-      <li>ICT Systems Integration</li>
-      <li>Business Process Automation</li>
-      <li>Enterprise POS Deployment</li>
-      <li>IT Infrastructure Consulting</li>
-    </ul>
+    <div class="exp-item">
+      <div class="exp-year">2015 - 2017</div>
+      <div class="exp-content">
+        <h4>Systems Developer</h4>
+        <p class="text-primary">Technology Solutions Firm</p>
+        <p>Developed and deployed custom software solutions, including POS systems, inventory management systems, and web applications for diverse clients.</p>
+      </div>
+    </div>
   </div>
-</div>
+</section>
 
-<footer class="text-center py-4 border-top border-secondary">
-  <small>© 2026 MUETI INTEGRATED SOLUTIONS | Proprietor-Led Enterprise</small>
+<!-- Notable Achievements -->
+<section class="bio-section">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="bio-card text-center">
+          <i class="fas fa-store fa-2x text-primary mb-3"></i>
+          <h4>50+</h4>
+          <p>POS Systems Deployed</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="bio-card text-center">
+          <i class="fas fa-code-branch fa-2x text-primary mb-3"></i>
+          <h4>30+</h4>
+          <p>API Integrations Completed</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="bio-card text-center">
+          <i class="fas fa-globe fa-2x text-primary mb-3"></i>
+          <h4>40+</h4>
+          <p>Websites Developed</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact CTA -->
+<section class="contact-cta">
+  <div class="container">
+    <h2>Let's Work Together</h2>
+    <p class="lead mb-4">Have a project in mind? Let's discuss how we can bring your vision to life</p>
+    <a href="contact.html" class="btn-primary-custom">Contact Johnbosco</a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 mb-4">
+        <h5>MUETI INTEGRATED SOLUTIONS</h5>
+        <p>Premier ICT company delivering enterprise-grade technology solutions across Kenya and East Africa.</p>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+          <a href="#"><i class="fab fa-github"></i></a>
+        </div>
+      </div>
+      
+      <div class="col-lg-2 col-md-6 mb-4">
+        <h5>Quick Links</h5>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="owner.html">Owner</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      
+      <div class="col-lg-3 col-md-6 mb-4">
+        <h5>Our Services</h5>
+        <ul class="footer-links">
+          <li><a href="index.html">API Integrations</a></li>
+          <li><a href="index.html">Web Development</a></li>
+          <li><a href="index.html">POS Systems</a></li>
+          <li><a href="index.html">ICT Infrastructure</a></li>
+          <li><a href="index.html">Business Automation</a></li>
+        </ul>
+      </div>
+      
+      <div class="col-lg-3 mb-4">
+        <h5>Contact Info</h5>
+        <ul class="footer-links">
+          <li><i class="fas fa-envelope me-2"></i> muetiintegratedsolutions@gmail.com</li>
+          <li><i class="fas fa-phone me-2"></i> +254 740 213 780</li>
+          <li><i class="fas fa-map-marker-alt me-2"></i> Nairobi, Kenya</li>
+          <li><i class="fas fa-clock me-2"></i> Mon-Fri: 8AM - 6PM</li>
+        </ul>
+      </div>
+    </div>
+    
+    <hr class="mt-4">
+    
+    <div class="text-center">
+      <small>© 2026 MUETI INTEGRATED SOLUTIONS. All rights reserved.</small>
+    </div>
+  </div>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  // Animate skill bars on scroll
+  const skillBars = document.querySelectorAll('.skill-progress');
+  const animateSkills = () => {
+    skillBars.forEach(bar => {
+      const width = bar.style.width;
+      bar.style.width = '0';
+      setTimeout(() => {
+        bar.style.width = width;
+      }, 100);
+    });
+  };
+  
+  // Trigger animation when section comes into view
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        animateSkills();
+        observer.disconnect();
+      }
+    });
+  });
+  
+  const skillsSection = document.querySelector('.skills-section');
+  if (skillsSection) {
+    observer.observe(skillsSection);
+  }
+</script>
 </body>
 </html>
